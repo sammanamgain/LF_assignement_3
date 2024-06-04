@@ -16,11 +16,14 @@ document.getElementById('toggle').addEventListener('click', function () {
     const githubs = document.querySelectorAll('#github')
     const download = document.querySelectorAll('#download')
     const github_modifier = document.querySelector('.github--modifier')
+    const gitlab_modifier=document.querySelector('.gitlab--modifier')
     if (footer.classList.contains('footer__white')) {
         github_modifier.classList.add('github--modifier__dark')
+        gitlab_modifier.classList.add('gitlab--modifier__dark')
         cardicons.forEach((cardicon) => {
             cardicon.classList.add('marketplace__dark')
         })
+        gitlab_modifier.classList.add('git')
 
         linkedins.forEach((linkedin) => {
             linkedin.src = './Assets/tag/bx_bxl-linkedin -dark.svg'

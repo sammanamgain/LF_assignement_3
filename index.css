@@ -164,7 +164,9 @@ button:hover {
     display: flex;
     align-items: center;
 }
-
+.navbar__title :hover {
+    cursor: pointer;
+}
 .primary__button {
     width: 166.8px;
     height: 40px;
@@ -178,6 +180,7 @@ button:hover {
     gap: 0px;
 }
 .primary__button__white {
+    margin-right: 2rem;
     color: white !important;
 }
 .primary__button__dark {
@@ -483,8 +486,12 @@ footer {
     color: red !important;
     background-color: white;
 }
+
 .github--modifier__dark {
     background-color: black;
+}
+.gitlab--modifier__dark {
+    filter: invert(100%);
 }
 .card__icon img {
     margin-right: 1rem;
@@ -499,10 +506,13 @@ button {
 }
 .white__button:hover,
 .primary__button:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: all 1s ease-in-out;
 }
 
+.loadmore :hover {
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .page__header {
         padding: 0px 16px;
