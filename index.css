@@ -29,6 +29,11 @@ body {
     font-family: var(--main-font);
     padding: 20px 20px;
 }
+.page__header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 .navbar__title {
     width: 50%;
     display: flex;
@@ -92,7 +97,7 @@ button:hover {
 }
 .introduction {
     width: 100%;
-    padding: 70px 302px 158px 301px;
+    padding: 90px 302px 158px 301px;
 
     display: flex;
     flex-direction: column;
@@ -362,7 +367,12 @@ button:hover {
     justify-content: center;
     align-items: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: transform 1s ease-in-out;
 }
+.application__image:hover {
+    transform: scale(1.2);
+}
+
 .application__image img {
     width: 100%;
     height: 100%;
@@ -370,6 +380,14 @@ button:hover {
 
 .application__list__items--github {
     margin-left: -2rem;
+}
+.loadmore {
+    transition: transform 1s ease-in-out;
+}
+
+.loadmore:hover {
+    transform: translate(0, -1rem);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .loadmore__white {
     background-color: #f2f2f7;
@@ -513,9 +531,12 @@ button {
 .loadmore :hover {
     cursor: pointer;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 480px) {
     .page__header {
-        padding: 0px 16px;
+        z-index: 11;
+        padding: 0px 0px;
+        width: 100%;
     }
     .page__navbar {
         display: flex;
@@ -527,6 +548,7 @@ button {
     .navbar__title {
         justify-content: flex-start;
         width: 60%;
+        margin-left: 1rem;
     }
 
     .navbar__title h3 {
@@ -557,6 +579,265 @@ button {
     }
     .introduction {
         width: 100%;
+        margin-top: 4rem;
+        padding: 1.56rem 6%;
+        padding-bottom: 12px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .introduction__profile {
+        margin-bottom: 26px;
+    }
+
+    .introduction__profile h4 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 23.47px;
+        letter-spacing: 0.005em;
+        text-align: left;
+    }
+    .introduction__profile > img {
+        margin-bottom: 20px;
+    }
+
+    .introduction__profession h3 {
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 34.24px;
+        letter-spacing: 0.04em;
+        text-align: center;
+    }
+    .introduction__description {
+        margin-top: 1rem;
+        padding: 0px;
+    }
+    .introduction__description h1 {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26.66px;
+        text-align: center;
+    }
+    .introduction__description h1 br {
+        display: none;
+    }
+    .introduction__link {
+        padding-top: 2.5rem;
+        width: 100%;
+    }
+    .cv {
+        flex-direction: column;
+    }
+    .primary__button {
+        margin-bottom: 1.5rem;
+        justify-content: space-around;
+    }
+    .introudction__link__socialmedia {
+        margin-top: 6.5rem;
+    }
+
+    .section {
+        padding: 0 0;
+        background-color: #f4f6fb;
+    }
+    .card {
+        flex-direction: column;
+        padding: 0;
+        position: relative;
+    }
+    .card__content {
+        order: 1;
+        /* background: #050519 !important; */
+        width: 100%;
+        /* color: white; */
+    }
+
+    .card__image {
+        width: 100%;
+        padding: 0;
+        object-fit: cover;
+        height: 40vh;
+    }
+    .card__icon {
+        position: absolute;
+        top: 1rem;
+
+        width: auto;
+    }
+    .card__icon img {
+        margin-right: 1rem;
+    }
+
+    .card__title h1 {
+        font-size: 24px;
+    }
+
+    .card__title img {
+        height: 68px;
+        width: 68px;
+    }
+    .card__content {
+        width: 100%;
+        padding: 30px 27px;
+    }
+
+    .card__description {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26.66px;
+        text-align: left;
+        /* background: #ffffffbd; */
+        -webkit-background-clip: text;
+        /* -webkit-text-fill-color: transparent; */
+    }
+    .card__badges {
+        width: 100%;
+    }
+    .card--button {
+        margin: 0 22%;
+        margin-bottom: 120px;
+    }
+    .application__list {
+        flex-direction: column;
+    }
+    .application {
+        padding: 3rem 24px 1rem 24px;
+    }
+    .application__title {
+        font-size: 24px;
+    }
+    .application__list__items {
+        padding: 5rem 0;
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+    .application__list__items:last-child {
+        border-bottom: 0px;
+    }
+    .application__list::after {
+        position: absolute;
+        width: 0%;
+        height: 0px;
+        background-color: #dedede;
+        top: 0rem;
+        left: 0;
+        content: '';
+    }
+    .application__list {
+        row-gap: 0rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2rem;
+    }
+    .business__contact {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .business__contact h1 {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26.66px;
+        text-align: left;
+    }
+    .card--button {
+        margin: 5% 0%;
+        margin-bottom: 12px;
+    }
+    .loadmore {
+        margin: 0px 0;
+        padding: 10px 0;
+    }
+    .footer--social-media {
+        margin-top: 3rem;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .footer__title {
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 34.24px;
+        letter-spacing: 0.04em;
+        text-align: left;
+    }
+    .button--modifier__dark {
+        background: #282c34 !important;
+        color: white;
+    }
+    .loadmore h1 {
+        font-size: 15px;
+    }
+    .github--modifier {
+        position: absolute;
+        /* background: white; */
+        top: 5rem;
+        z-index: 99999991;
+    }
+    .white__button {
+        margin-left: -2rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+    .page__header {
+        z-index: 11;
+        padding: 0px 0px;
+        width: 100%;
+    }
+    .page__navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: var(--main-font);
+        padding: 20px 0px;
+    }
+    .navbar__title {
+        justify-content: flex-start;
+        width: 60%;
+        margin-left: 1rem;
+    }
+
+    .navbar__title h3 {
+        color: red;
+        display: none;
+    }
+    .navbar__list {
+        display: none;
+    }
+    .navbar__list__mobile {
+        width: 40%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar__list__mobile button {
+        /* padding:5px;
+       border-radius: 5px; */
+        width: 78px;
+        height: 28px;
+        top: 20px;
+        left: 273px;
+        gap: 0px;
+        border-radius: 29px;
+
+        background: #f2f2f7;
+    }
+    .introduction__description h1 br {
+        display: none;
+    }
+    button.menu {
+        margin-right: 5rem;
+    }
+    .introduction {
+        width: 100%;
+        margin-top: 4rem;
         padding: 1.56rem 6%;
         padding-bottom: 12px;
 
@@ -611,6 +892,10 @@ button {
     .introudction__link__socialmedia {
         margin-top: 6.5rem;
     }
+    .white__button {
+        margin-left: -2rem;
+    }
+
     .section {
         padding: 0 0;
         background-color: #f4f6fb;
@@ -630,7 +915,9 @@ button {
     .card__image {
         width: 100%;
         padding: 0;
-        object-fit: contain;
+
+        height: 40vh;
+        object-fit: cover;
     }
     .card__icon {
         position: absolute;
@@ -738,16 +1025,16 @@ button {
     }
     .github--modifier {
         position: absolute;
-        background: white;
+        /* background: white; */
         top: 5rem;
         z-index: 99999991;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 769px) and (max-width: 1279px) {
     .introduction {
         width: 100%;
-        padding: 70px 102px 158px 102px;
+        padding: 115px 102px 158px 102px;
 
         display: flex;
         flex-direction: column;
@@ -756,6 +1043,9 @@ button {
     .introduction__profession h3 {
         line-height: 40px;
         font-size: 28px;
+    }
+    .introduction__description h1 br {
+        display: none;
     }
     .section {
         padding: 1.06rem 1.125rem;
@@ -771,6 +1061,15 @@ button {
     }
     .application {
         padding: 3rem 64px;
+    }
+    .section {
+        padding: 0rem 0rem;
+    }
+    .application__list {
+        column-gap: 0.1rem;
+    }
+    .application__list__items {
+        width: 45%;
     }
 
     footer {

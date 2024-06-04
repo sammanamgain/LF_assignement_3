@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.getElementById('toggle').addEventListener('click', function () {
     const body = document.body
     const page = document.querySelector('.page')
@@ -26,7 +41,7 @@ document.getElementById('toggle').addEventListener('click', function () {
         gitlab_modifier.classList.add('git')
 
         linkedins.forEach((linkedin) => {
-            linkedin.src = './Assets/tag/bx_bxl-linkedin -dark.svg'
+            linkedin.src = './Assets/tag/bx_bxl-linkedin-dark.svg'
         })
         instas.forEach((insta) => {
             insta.src = './Assets/tag/insta__dark.svg'
@@ -52,13 +67,13 @@ document.getElementById('toggle').addEventListener('click', function () {
             linkedin.src = './Assets/tag/bx_bxl-linkedin.svg'
         })
         instas.forEach((insta) => {
-            insta.src = './Assets/tag/Group 2041.svg'
+            insta.src = './Assets/tag/Group2041.svg'
         })
         dribbles.forEach((dribble) => {
             dribble.src = './Assets/tag/Vector.svg'
         })
         githubs.forEach((github) => {
-            github.src = './Assets/tag/Frame 18 (1).svg'
+            github.src = './Assets/tag/Frame18(1).svg'
         })
 
         download.src = './Assets/download.png'
@@ -137,7 +152,7 @@ document.getElementById('toggle').addEventListener('click', function () {
 console.log(' it is loaded')
 
 document.getElementById('togglemobile').addEventListener('click', function () {
-    console.log('functin is called')
+
     const body = document.body
     const page = document.querySelector('.page')
     const introduction = document.querySelector('.introduction')
@@ -156,8 +171,12 @@ document.getElementById('togglemobile').addEventListener('click', function () {
     const dribbles = document.querySelectorAll('#dribble')
     const githubs = document.querySelectorAll('#github')
     const download = document.querySelector('#download')
+    const gitlab_modifier=document.querySelector('.gitlab--modifier')
+    const github_modifier = document.querySelector('.github--modifier')
 
     if (footer.classList.contains('footer__white')) {
+        github_modifier.classList.add('github--modifier__dark')
+        gitlab_modifier.classList.add('gitlab--modifier__dark')
         cardicons.forEach((cardicon) => {
             cardicon.classList.add('marketplace__dark')
         })
@@ -167,7 +186,7 @@ document.getElementById('togglemobile').addEventListener('click', function () {
         buttonmodifier.classList.add('button--modifier__dark')
 
         linkedins.forEach((linkedin) => {
-            linkedin.src = './Assets/tag/bx_bxl-linkedin -dark.svg'
+            linkedin.src = './Assets/tag/bx_bxl-linkedin-dark.svg'
         })
         instas.forEach((insta) => {
             insta.src = './Assets/tag/insta__dark.svg'
@@ -181,6 +200,8 @@ document.getElementById('togglemobile').addEventListener('click', function () {
 
         download.src = './Assets/tag/dark__downlaod.svg'
     } else {
+        github_modifier.classList.remove('github--modifier__dark')
+        gitlab_modifier.classList.remove('gitlab--modifier__dark')
         cardicons.forEach((cardicon) => {
             cardicon.classList.remove('marketplace__dark')
         })
@@ -190,13 +211,13 @@ document.getElementById('togglemobile').addEventListener('click', function () {
             linkedin.src = './Assets/tag/bx_bxl-linkedin.svg'
         })
         instas.forEach((insta) => {
-            insta.src = './Assets/tag/Group 2041.svg'
+            insta.src = './Assets/tag/Group2041.svg'
         })
         dribbles.forEach((dribble) => {
             dribble.src = './Assets/tag/Vector.svg'
         })
         githubs.forEach((github) => {
-            github.src = './Assets/tag/Frame 18 (1).svg'
+            github.src = './Assets/tag/Frame18(1).svg'
         })
 
         download.src = './Assets/download.png'
