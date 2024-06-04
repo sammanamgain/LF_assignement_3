@@ -140,7 +140,7 @@ button:hover {
     text-align: center;
 }
 .introduction__description {
-    padding: 16px 61px;
+    padding: 16px 71px;
 }
 
 .introduction__description h1 {
@@ -404,11 +404,6 @@ button:hover {
     letter-spacing: 0.005em;
     text-align: left;
 }
-.github--modifier {
-    opacity: 1;
-    z-index: 100;
-    background: white;
-}
 
 .navbar__list__mobile {
 }
@@ -458,18 +453,32 @@ footer {
     gap: 0px;
 }
 
+.github--modifier {
+    position: absolute;
+    background: white;
+    top: 0rem;
+    z-index: 99999991;
+}
 .gitlab--modifier {
-    width: 50px;
-    height: 50px;
+    z-index: 1;
+    margin-left: 3rem;
+    margin-bottom: 0.4rem;
+    margin-top: 0.3rem;
+
+    width: 55px;
+    height: 55px;
+    padding: 14px 19.53px 13.67px 20px;
+    gap: 0px;
+    border-radius: 71px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    /* padding:1rem */
 }
 
-.gitlab--modifier {
-    position: absolute;
-    top: 0.5rem;
-    left: 3.1rem;
-    /* background-color: white; */
-    padding: 1rem;
-}
 .gitlab--modifier img {
     color: red !important;
     background-color: white;
@@ -629,6 +638,7 @@ button {
         width: 100%;
         padding: 30px 27px;
     }
+
     .card__description {
         font-size: 14px;
         font-weight: 500;
@@ -695,12 +705,7 @@ button {
         width: 60%;
         justify-content: space-between;
     }
-    .gitlab--modifier {
-        top: 5.5rem;
-        left: 3.2rem;
 
-        padding: 1rem;
-    }
     .footer__title {
         font-size: 24px;
         font-weight: 800;
@@ -714,5 +719,11 @@ button {
     }
     .loadmore h1 {
         font-size: 15px;
+    }
+    .github--modifier {
+        position: absolute;
+        background: white;
+        top: 5rem;
+        z-index: 99999991;
     }
 }
