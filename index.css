@@ -497,6 +497,12 @@ button {
     box-shadow: none;
     border: none;
 }
+.white__button:hover,
+.primary__button:hover {
+    transform: scale(1.1);
+    transition: all 1s ease-in-out;
+}
+
 @media (max-width: 768px) {
     .page__header {
         padding: 0px 16px;
@@ -725,5 +731,41 @@ button {
         background: white;
         top: 5rem;
         z-index: 99999991;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .introduction {
+        width: 100%;
+        padding: 70px 102px 158px 102px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .introduction__profession h3 {
+        line-height: 40px;
+        font-size: 28px;
+    }
+    .section {
+        padding: 1.06rem 1.125rem;
+    }
+    .card__image {
+        width: 47%;
+        height: auto;
+        /* height: 46.125rem; */
+    }
+    .card__content {
+        width: 53%;
+        padding: 59px 32px;
+    }
+    .application {
+        padding: 3rem 64px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 3rem;
     }
 }
