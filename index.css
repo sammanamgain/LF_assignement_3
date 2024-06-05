@@ -604,7 +604,7 @@ button {
 
     .introduction__profession h3 {
         font-family: 'Montserrat';
-        font-size: 16px;
+        font-size: 24px;
         font-weight: 800;
         line-height: 34.24px;
         letter-spacing: 0.04em;
@@ -636,6 +636,7 @@ button {
     }
     .introudction__link__socialmedia {
         margin-top: 6.5rem;
+        margin-bottom: 1rem;
     }
 
     .section {
@@ -663,9 +664,10 @@ button {
     .card__icon {
         position: absolute;
         top: 1rem;
-
+        padding: 4px 20px;
         width: auto;
     }
+
     .card__icon img {
         margin-right: 1rem;
     }
@@ -703,13 +705,14 @@ button {
         flex-direction: column;
     }
     .application {
-        padding: 3rem 24px 1rem 24px;
+        padding: 1rem 24px 1rem 24px;
     }
     .application__title {
         font-size: 24px;
+        margin-bottom: 0px;
     }
     .application__list__items {
-        padding: 5rem 0;
+        padding: 4rem 0;
         width: 100%;
         border-bottom: 1px solid black;
     }
@@ -781,10 +784,12 @@ button {
     .white__button {
         margin-left: -2rem;
     }
+    .menu {
+        margin-right: 1rem;
+    }
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
-
     .page__header {
         z-index: 11;
         padding: 0px 0px;
@@ -833,7 +838,7 @@ button {
         display: none;
     }
     button.menu {
-        margin-right: 5rem;
+        margin-right: 6rem;
     }
     .introduction {
         width: 100%;
@@ -850,7 +855,7 @@ button {
     }
 
     .introduction__profile h4 {
-        font-size: 16px;
+        font-size: 24px;
         font-weight: 500;
         line-height: 23.47px;
         letter-spacing: 0.005em;
@@ -862,7 +867,7 @@ button {
 
     .introduction__profession h3 {
         font-family: 'Montserrat';
-        font-size: 16px;
+        font-size: 40px;
         font-weight: 800;
         line-height: 34.24px;
         letter-spacing: 0.04em;
@@ -873,7 +878,7 @@ button {
         padding: 0px;
     }
     .introduction__description h1 {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 500;
         line-height: 26.66px;
         text-align: center;
@@ -890,7 +895,7 @@ button {
         justify-content: space-around;
     }
     .introudction__link__socialmedia {
-        margin-top: 6.5rem;
+        margin-top: 3.5rem;
     }
     .white__button {
         margin-left: -2rem;
@@ -902,7 +907,7 @@ button {
     }
     .card {
         flex-direction: column;
-        padding: 0;
+
         position: relative;
     }
     .card__content {
@@ -959,15 +964,16 @@ button {
         margin-bottom: 120px;
     }
     .application__list {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .application {
         padding: 3rem 24px 3rem 24px;
     }
     .application__list__items {
         padding: 5rem 0;
-        width: 100%;
-        border-bottom: 1px solid black;
+        width: 47%;
+        border-bottom: 0px solid black;
     }
     .application__list__items:last-child {
         border-bottom: 0px;
@@ -1041,8 +1047,8 @@ button {
         align-items: center;
     }
     .introduction__profession h3 {
-        line-height: 40px;
-        font-size: 28px;
+        line-height: 60px;
+        font-size: 56px;
     }
     .introduction__description h1 br {
         display: none;
@@ -1071,7 +1077,15 @@ button {
     .application__list__items {
         width: 45%;
     }
-
+    .application__list::after {
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        background-color: #dedede;
+        top: 17rem;
+        left: 0;
+        content: '';
+    }
     footer {
         display: flex;
         flex-direction: column;

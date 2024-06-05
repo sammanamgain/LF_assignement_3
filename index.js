@@ -1,18 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.getElementById('toggle').addEventListener('click', function () {
     const body = document.body
     const page = document.querySelector('.page')
@@ -30,8 +15,8 @@ document.getElementById('toggle').addEventListener('click', function () {
     const dribbles = document.querySelectorAll('#dribble')
     const githubs = document.querySelectorAll('#github')
     const download = document.querySelectorAll('#download')
+    const gitlab_modifier = document.querySelector('.gitlab--modifier')
     const github_modifier = document.querySelector('.github--modifier')
-    const gitlab_modifier=document.querySelector('.gitlab--modifier')
     if (footer.classList.contains('footer__white')) {
         github_modifier.classList.add('github--modifier__dark')
         gitlab_modifier.classList.add('gitlab--modifier__dark')
@@ -59,6 +44,7 @@ document.getElementById('toggle').addEventListener('click', function () {
         footer.classList.add('loadmorfooter__dark')
     } else {
         github_modifier.classList.remove('github--modifier__dark')
+        gitlab_modifier.classList.remove('gitlab--modifier__dark')
         cardicons.forEach((cardicon) => {
             cardicon.classList.remove('marketplace__dark')
         })
@@ -152,7 +138,6 @@ document.getElementById('toggle').addEventListener('click', function () {
 console.log(' it is loaded')
 
 document.getElementById('togglemobile').addEventListener('click', function () {
-
     const body = document.body
     const page = document.querySelector('.page')
     const introduction = document.querySelector('.introduction')
@@ -171,7 +156,7 @@ document.getElementById('togglemobile').addEventListener('click', function () {
     const dribbles = document.querySelectorAll('#dribble')
     const githubs = document.querySelectorAll('#github')
     const download = document.querySelector('#download')
-    const gitlab_modifier=document.querySelector('.gitlab--modifier')
+    const gitlab_modifier = document.querySelector('.gitlab--modifier')
     const github_modifier = document.querySelector('.github--modifier')
 
     if (footer.classList.contains('footer__white')) {
